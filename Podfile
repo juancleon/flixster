@@ -6,10 +6,6 @@ target 'flixster' do
   use_frameworks!
 
   # Pods for flixster
-  
-  pod 'Alamofire', '~> 4.4'
-  # Add additional dependencies
-  pod 'OAuthSwift', '~> 1.1.0'
-  pod 'OAuthSwiftAlamofire' 
+  pod 'AlamofireImage'
   
 end

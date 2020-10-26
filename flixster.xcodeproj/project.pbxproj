@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C084FF4A346C076A520CD50B /* Pods_flixster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A3EA6C54506E507B43986 /* Pods_flixster.framework */; };
+		D44A353D2546351E00B14CA2 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44A353C2546351E00B14CA2 /* MovieDetailsViewController.swift */; };
+		D4A8E6BB2546650200C8B71A /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A8E6BA2546650200C8B71A /* MovieGridViewController.swift */; };
+		D4A8E6C02546703100C8B71A /* MovieGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A8E6BF2546703100C8B71A /* MovieGridCell.swift */; };
 		D4ECDD682543C3CF00BBDDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECDD672543C3CF00BBDDE5 /* AppDelegate.swift */; };
 		D4ECDD6A2543C3CF00BBDDE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECDD692543C3CF00BBDDE5 /* SceneDelegate.swift */; };
 		D4ECDD6F2543C3CF00BBDDE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4ECDD6D2543C3CF00BBDDE5 /* Main.storyboard */; };
@@ -40,6 +43,9 @@
 		106A3EA6C54506E507B43986 /* Pods_flixster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flixster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36569C4190F1A116B6EEC519 /* Pods-flixster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixster.debug.xcconfig"; path = "Target Support Files/Pods-flixster/Pods-flixster.debug.xcconfig"; sourceTree = "<group>"; };
 		5E5B2279419DCF234AC8DC31 /* Pods-flixster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixster.release.xcconfig"; path = "Target Support Files/Pods-flixster/Pods-flixster.release.xcconfig"; sourceTree = "<group>"; };
+		D44A353C2546351E00B14CA2 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		D4A8E6BA2546650200C8B71A /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
+		D4A8E6BF2546703100C8B71A /* MovieGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridCell.swift; sourceTree = "<group>"; };
 		D4ECDD642543C3CF00BBDDE5 /* flixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flixster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ECDD672543C3CF00BBDDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4ECDD692543C3CF00BBDDE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,14 +95,12 @@
 				36569C4190F1A116B6EEC519 /* Pods-flixster.debug.xcconfig */,
 				5E5B2279419DCF234AC8DC31 /* Pods-flixster.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		D4ECDD5B2543C3CF00BBDDE5 = {
 			isa = PBXGroup;
 			children = (
-				D4ECDDA22543EE9300BBDDE5 /* MovieCell.swift */,
 				D4ECDD662543C3CF00BBDDE5 /* flixster */,
 				D4ECDD7D2543C3D000BBDDE5 /* flixsterTests */,
 				D4ECDD882543C3D000BBDDE5 /* flixsterUITests */,
@@ -119,13 +123,17 @@
 		D4ECDD662543C3CF00BBDDE5 /* flixster */ = {
 			isa = PBXGroup;
 			children = (
+				D4ECDDA22543EE9300BBDDE5 /* MovieCell.swift */,
+				D4ECDD6D2543C3CF00BBDDE5 /* Main.storyboard */,
 				D4ECDD672543C3CF00BBDDE5 /* AppDelegate.swift */,
 				D4ECDD692543C3CF00BBDDE5 /* SceneDelegate.swift */,
-				D4ECDD6D2543C3CF00BBDDE5 /* Main.storyboard */,
 				D4ECDD702543C3D000BBDDE5 /* Assets.xcassets */,
 				D4ECDD722543C3D000BBDDE5 /* LaunchScreen.storyboard */,
 				D4ECDD752543C3D000BBDDE5 /* Info.plist */,
 				D4ECDD9D2543C7DB00BBDDE5 /* MoviesViewController.swift */,
+				D44A353C2546351E00B14CA2 /* MovieDetailsViewController.swift */,
+				D4A8E6BA2546650200C8B71A /* MovieGridViewController.swift */,
+				D4A8E6BF2546703100C8B71A /* MovieGridCell.swift */,
 			);
 			path = flixster;
 			sourceTree = "<group>";
@@ -330,10 +338,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44A353D2546351E00B14CA2 /* MovieDetailsViewController.swift in Sources */,
 				D4ECDD682543C3CF00BBDDE5 /* AppDelegate.swift in Sources */,
 				D4ECDD6A2543C3CF00BBDDE5 /* SceneDelegate.swift in Sources */,
 				D4ECDDA32543EE9300BBDDE5 /* MovieCell.swift in Sources */,
 				D4ECDD9E2543C7DB00BBDDE5 /* MoviesViewController.swift in Sources */,
+				D4A8E6BB2546650200C8B71A /* MovieGridViewController.swift in Sources */,
+				D4A8E6C02546703100C8B71A /* MovieGridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,14 +521,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = flixster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.flixster;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Juancodepath.flixster123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -529,14 +543,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = flixster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.flixster;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Juancodepath.flixster123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
